@@ -1,0 +1,62 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    gap: 40px;
+    overflow: hidden;
+    justify-content: center;
+
+}
+
+.flag{
+    border-radius: 25px;
+    max-width: 300px;
+    max-height: auto;
+    border: solid 5px;
+    border-color: rgb(233, 158, 28);
+    background-color: rgb(79, 198, 238);
+    padding: 30px;
+    align-items: center;
+}
+
+h1, h2{
+    color: orange;
+}
+
+p{
+    color: darkblue;
+    font-size: 17px;
+}
+
+ul{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width:550px;
+    
+}
+.list{
+    background-color: orange;
+    border-radius: 25px;
+    max-width: 250px;
+    min-height: 60px;
+    margin: 10px;
+    text-align: center;
+    font-size: 18px;
+
+}
+
+.languages{
+    background-color: darkblue;
+    border-radius: 25px;
+    max-width: 250px;
+    min-height: 22px;
+    margin: 10px;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+}
+
+.iconClimate {
+    display: inline;
+    color: orange;
+}
