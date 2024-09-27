@@ -23,9 +23,9 @@ function App() {
     if (country) {
       const filtered = data.filter(n => n.name.common.toLowerCase().includes(country.toLowerCase()))
       setFilteredCountries(filtered)
-      if (filteredCountries.length === 1){
+      if (filteredCountries.length === 1) {
         setSelectedCountry(filteredCountries[0])
-      }else{
+      } else {
         setSelectedCountry(null)
       }
     }
@@ -38,19 +38,30 @@ function App() {
     setCountry(newValue)
   }
 
-  const handleButton = (obj) =>{
+  const handleButton = (obj) => {
     setSelectedCountry(obj)
+  }
+
+  const cleanAll = () => {
+    setValue('')
+    setSelectedCountry(null)
+    setFilteredCountries([])
+
   }
 
   return (
     <div>
       <label>Find the country </label>
       <input type='text' value={value} onChange={handleChange} />
-      <PrintCountries 
-      filteredCountries={filteredCountries}
-      selectedCountry={selectedCountry}
-      onShow={handleButton}
-       />
+      <div>
+        <button onClick={() => cleanAll()} >Clean</button>
+      </div>
+
+      <PrintCountries
+        filteredCountries={filteredCountries}
+        selectedCountry={selectedCountry}
+        onShow={handleButton}
+      />
     </div>
   )
 }
